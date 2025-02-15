@@ -22,8 +22,8 @@ class Graph:
         return False
     
     def checkcyclic(self):
-        visited = [False] * self.sides
-        rstack = [False] * self.sides
+        visited = [False] * self.sides+1
+        rstack = [False] * self.sides+1
         for i in range(1,self.sides+1):
             if visited[i] == False:
                 if self.iscyclic(i,visited,rstack):
